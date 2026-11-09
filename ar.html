@@ -1,61 +1,33 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AR Experience</title>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StudyVision AR Experience</title>
+    <!-- استدعاء مكتبات A-Frame و MindAR -->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <link rel="stylesheet" href="Style.CSS">
+  </head>
+  <body style="margin: 0; overflow: hidden;">
 
-<style>
-body{
-font-family:Arial;
-background:#111827;
-color:white;
-text-align:center;
-padding:40px;
-}
+    <!-- شريط علوي بسيط للعودة للرئيسية -->
+    <div style="position: absolute; top: 10px; right: 10px; z-index: 10;">
+      <a href="index.html" class="btn" style="text-decoration: none; padding: 5px 15px; font-size: 14px;">العودة للرئيسية</a>
+    </div>
 
-.card{
-background:#1f2937;
-padding:25px;
-margin:20px;
-border-radius:20px;
-}
+    <!-- مشهد الواقع المعزز -->
+    <a-scene mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/examples/image-tracking/assets/card-example/card.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights: true" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-a{
-background:#2563eb;
-color:white;
-padding:12px 20px;
-border-radius:20px;
-text-decoration:none;
-}
-</style>
+      <!-- العنصر الذي سيظهر فوق الصورة المستهدفة -->
+      <a-entity mindar-image-target="targetIndex: 0">
+        <!-- مربع أزرق أنيق وشفاف يوضح معلومات تجريبية للطالب -->
+        <a-plane color="#0284c7" opacity="0.85" position="0 0 0" height="0.55" width="1" rotation="0 0 0">
+          <a-text value="StudyVision AR\nمعدل لمهام اليوم" align="center" color="#FFFFFF" scale="0.4 0.4 0.4" position="0 0 0.1"></a-text>
+        </a-plane>
+      </a-entity>
 
-</head>
-<body>
-
-<h1>تجربة الواقع المعزز</h1>
-
-<div class="card">
-📚 مشروع البرمجة
-<br><br>
-🔥 أولوية عالية
-</div>
-
-<div class="card">
-📝 اختبار قواعد البيانات
-<br><br>
-⚠️ أولوية متوسطة
-</div>
-
-<div class="card">
-✅ واجب الذكاء الاصطناعي
-<br><br>
-تم الإنجاز
-</div>
-
-<br>
-
-<a href="index.html">العودة للرئيسية</a>
-
-</body>
+    </a-scene>
+  </body>
 </html>
