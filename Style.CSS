@@ -1,99 +1,62 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+/* تنسيقات عامة ومريحة للعين */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8fb; /* خلفية هادئة وفاتحة جداً */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* دعم اللغة العربية */
+    line-height: 1.6;
 }
 
-body{
-    background:#F8FBFF;
+/* شريط التنقل العلوي بتدرج أزرق مموج وأنيق */
+nav, header {
+    background: linear-gradient(135deg, #0284c7, #38bdf8); /* تدرج أزرق فاتح واحترافي */
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+nav a, header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: opacity 0.2s;
 }
 
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    color:#3B82F6;
+nav a:hover, header a:hover {
+    opacity: 0.8;
 }
 
-.menu a{
-    text-decoration:none;
-    margin-left:20px;
-    color:#1E3A8A;
-    font-weight:500;
+/* العناوين الرئيسية */
+h1, h2, h3 {
+    color: #0369a1; /* أزرق داكن مريح ومتناسق */
 }
 
-.hero{
-    text-align:center;
-    padding:100px 20px;
+/* تصميم الأزرار التفاعلية */
+button, .btn {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.hero h1{
-    font-size:50px;
-    color:#1E3A8A;
-    margin-bottom:20px;
+button:hover, .btn:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
 }
 
-.hero p{
-    max-width:650px;
-    margin:auto;
-    color:#4B5563;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.buttons{
-    margin-top:30px;
-}
-
-.primary{
-    background:#60A5FA;
-    color:white;
-    border:none;
-    padding:14px 28px;
-    border-radius:12px;
-    cursor:pointer;
-    margin-right:10px;
-}
-
-.secondary{
-    background:#DBEAFE;
-    color:#1E3A8A;
-    border:none;
-    padding:14px 28px;
-    border-radius:12px;
-    cursor:pointer;
-}
-
-.features{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    padding:60px 20px;
-}
-
-.card{
-    background:white;
-    width:300px;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.05);
-}
-
-.card h3{
-    color:#2563EB;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#6B7280;
+/* تنسيق الحاويات والأقسام */
+section, .container {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.05); /* ظل خفيف بلون أزرق */
 }
