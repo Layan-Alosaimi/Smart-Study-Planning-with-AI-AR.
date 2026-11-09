@@ -10,7 +10,7 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
 
-    <!-- شريط علوي بسيط للعودة للرئيسية -->
+    <!-- زر للعودة للرئيسية -->
     <div style="position: absolute; top: 10px; right: 10px; z-index: 10;">
       <a href="index.html" class="btn" style="text-decoration: none; padding: 5px 15px; font-size: 14px;">العودة للرئيسية</a>
     </div>
@@ -20,11 +20,10 @@
       
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <!-- العنصر الذي سيظهر فوق الصورة المستهدفة -->
+      <!-- العنصر المعروض فوق الهدف -->
       <a-entity mindar-image-target="targetIndex: 0">
-        <!-- مربع أزرق أنيق وشفاف يوضح معلومات تجريبية للطالب -->
         <a-plane color="#0284c7" opacity="0.85" position="0 0 0" height="0.55" width="1" rotation="0 0 0">
-          <a-text value="StudyVision AR\nمعدل لمهام اليوم" align="center" color="#FFFFFF" scale="0.4 0.4 0.4" position="0 0 0.1"></a-text>
+          <a-text value="StudyVision AR\nSmart Study Vision" align="center" color="#FFFFFF" scale="0.4 0.4 0.4" position="0 0 0.1"></a-text>
         </a-plane>
       </a-entity>
 
