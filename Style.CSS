@@ -1,24 +1,25 @@
-/* تنسيقات عامة ومريحة للعين */
+/* خلفية داكنة مموجة وأنيقة مريحة للعين */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f8fb; /* خلفية هادئة وفاتحة جداً */
-    color: #333333;
+    background: linear-gradient(135deg, #0b0f19, #0f172a, #1e293b); /* تدرج أسود إلى أزرق داكن مموج */
+    background-attachment: fixed;
+    color: #e2e8f0; /* نص أبيض هادئ وواضح */
     margin: 0;
     padding: 0;
-    direction: rtl; /* دعم اللغة العربية */
+    direction: rtl;
     line-height: 1.6;
 }
 
-/* شريط التنقل العلوي بتدرج أزرق مموج وأنيق */
+/* شريط التنقل العلوي بتدرج أزرق مموج وواضح */
 nav, header {
-    background: linear-gradient(135deg, #0284c7, #38bdf8); /* تدرج أزرق فاتح واحترافي */
-    color: white;
+    background: linear-gradient(135deg, #0284c7, #38bdf8); /* أزرق فاتح متدرج مميز */
+    color: #ffffff;
     padding: 15px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav a, header a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 600;
@@ -29,34 +30,36 @@ nav a:hover, header a:hover {
     opacity: 0.8;
 }
 
-/* العناوين الرئيسية */
+/* العناوين بلون أزرق فاتح وبارز على الخلفية الداكنة */
 h1, h2, h3 {
-    color: #0369a1; /* أزرق داكن مريح ومتناسق */
+    color: #38bdf8; 
 }
 
-/* تصميم الأزرار التفاعلية */
+/* الأقسام بحاويات داكنة وشفافة قليلاً مع ظل أزرق خفيف */
+section, .container {
+    background: rgba(30, 41, 59, 0.7); /* خلفية داكنة شبه شفافة */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.2); /* إطار أزرق خفيف ومرتب */
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* تصميم الأزرار */
 button, .btn {
-    background-color: #0284c7;
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 button:hover, .btn:hover {
-    background-color: #0369a1;
+    opacity: 0.9;
     transform: translateY(-2px);
-}
-
-/* تنسيق الحاويات والأقسام */
-section, .container {
-    background: #ffffff;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 900px;
-    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.05); /* ظل خفيف بلون أزرق */
 }
